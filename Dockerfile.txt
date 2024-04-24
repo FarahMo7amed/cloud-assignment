@@ -1,0 +1,7 @@
+FROM python:3.9
+WORKDIR /AssCloud
+COPY . /AssCloud
+RUN pip install --no-cache-dir nltk
+RUN python -m nltk.downloader stopwords
+
+CMD ["python","AssCloud.py"]
